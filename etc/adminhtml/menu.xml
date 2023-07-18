@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Solution_ExampleAdminNewPage::banner_manager" title="Banner Manager" translate="title" module="Solution_ExampleAdminNewPage"  resource="Solution_ExampleAdminNewPage::banner_manager"/>
+        <add id="Solution_ExampleAdminNewPage::list_banner" title="List Banner" translate="title" module="Solution_ExampleAdminNewPage" parent="Solution_ExampleAdminNewPage::banner_manager"  dependsOnModule="Solution_ExampleAdminNewPage" action="banner/helloworld/index" resource="Solution_ExampleAdminNewPage::banner_manager"/>
+        <add id="Solution_ExampleAdminNewPage::custom_banner" title="Custom Banner" translate="title" module="Solution_ExampleAdminNewPage" parent="Solution_ExampleAdminNewPage::banner_manager"  dependsOnModule="Solution_ExampleAdminNewPage" action="banner/helloworld/custom" resource="Solution_ExampleAdminNewPage::banner_manager"/>
+        <add id="Solution_ExampleAdminNewPage::new_banner" title="New Banner" translate="title" module="Solution_ExampleAdminNewPage" parent="Solution_ExampleAdminNewPage::banner_manager"  dependsOnModule="Solution_ExampleAdminNewPage" action="banner/helloworld/edit" resource="Solution_ExampleAdminNewPage::banner_manager"/>
+    </menu>
+</config>

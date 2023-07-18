@@ -1,0 +1,45 @@
+<?php
+/** @var \Solution\ExampleAdminNewPage\Block\ShowData $block*
+ *
+ */
+$collection = $block->getCollection();
+if ($collection->count()) {
+    ?>
+    <div class="table-wrapper orders-history">
+        <table class="data table table-order-items history" id="my-orders-table">
+            <caption class="table-caption"><?php echo __('Grid Record') ?></caption>
+            <thead>
+            <tr>
+                <th scope="col" class="col id"><?php echo __('ID') ?></th>
+                <th scope="col" class="col name"><?php echo __('Name') ?></th>
+                <th scope="col" class="col email"><?php echo __('Email') ?></th>
+                <th scope="col" class="col telephone"><?php echo __('Telephone') ?></th>
+<!--                <th scope="col" class="col createat">--><?php //echo __('Created At') ?><!--</th>-->
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            foreach ($collection as $item): ?>
+                <tr>
+                    <td class="col id">
+                        <?php echo $item->getId() ?>
+                    </td>
+                    <td class="col name">
+                        <?php echo $item->getImage() ?>
+                    </td>
+                    <td class="col email">
+                        <?php echo $item->getLink() ?>
+                    </td>
+                    <td class="col telephone">
+                        <?php echo $item->getComment() ?>
+                    </td>
+<!--                    <td-->
+<!--                        class="col title">--><?php //echo date('Y-m-d', strtotime($item->getCreatedAt())); ?><!--</td>-->
+                </tr>
+            <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+    <?php
+}
+?>

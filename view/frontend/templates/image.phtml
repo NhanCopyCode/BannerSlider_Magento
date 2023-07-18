@@ -1,0 +1,21 @@
+<?php
+///** @var Template $block */
+//
+//use Magento\Framework\View\Element\Template;
+//
+//$imagePath = $block->getData('custom_image');
+//$imageUrl = $block->getUrl('media/custom/image') . $imagePath;
+//?>
+<!--<img src="-->
+    use Solution\ExampleAdminNewPage\Block\Image;<?php //= $imageUrl ?><!--" alt="Custom Image">-->
+
+<?php
+/** @var Image $block */
+$imageModel = $block->getImage();
+?>
+
+<?php if ($imageModel->getId()): ?>
+    <img src="<?php echo $block->escapeHtml($imageModel->getUrl()); ?>" alt="<?php echo $block->escapeHtml($imageModel->getLabel()); ?>">
+<?php else: ?>
+    <p>No image available.</p>
+<?php endif; ?>
