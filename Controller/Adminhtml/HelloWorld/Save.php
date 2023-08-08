@@ -190,10 +190,10 @@ class Save extends Action
         if ($id) {
             $post->load($id);
         }
-        echo "<pre>";
-        print_r($data['images']);
-        echo "</pre>";
-        die;
+//        echo "<pre>";
+//        print_r($data['images']);
+//        echo "</pre>";
+//        die;
 
         try {
             $post->addData($newData);

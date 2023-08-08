@@ -16,7 +16,7 @@
             <button name="add">
                 <url path="*/*/new"/>
                 <class>primary</class>
-                <label translate="true">Add New Page</label>
+                <label translate="true">Add new Image</label>
             </button>
         </buttons>
         <spinner>banner_columns</spinner>

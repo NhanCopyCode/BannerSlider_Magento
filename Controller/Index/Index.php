@@ -24,18 +24,7 @@ class Index implements ActionInterface
     }
     public function execute()
     {
-//        $banner = $this->bannerFactory->create();
-//        $collection = $banner->getCollection();
-//
-//        foreach ($collection as $item) {
-//            echo "<pre>";
-//            print_r($item->getData());
-//            echo "</pre>";
-//        }
-//
-//        $resultPage = $this->resultFactory->create(\Magento\Framework\Controller\ResultFactory::TYPE_PAGE);
-//        return $resultPage;
-//        return "You are right";
+
             return $this->resultPageFactory->create();
     }
 }

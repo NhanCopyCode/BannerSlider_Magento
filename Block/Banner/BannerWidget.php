@@ -73,21 +73,36 @@ class BannerWidget extends Template implements BlockInterface
     /**
      * @inheritdoc
      */
-    protected function _beforeToHtml()
-    {
-        // Init collection
-        $collection = $this->bannerCollectionFactory->create();
+//    protected function _beforeToHtml()
+//    {
+//        // Init collection
+//        $collection = $this->bannerCollectionFactory->create();
+//
+//        // Get enabled images
+////        $banners = $collection->addFieldToFilter('status', ['eq' => true])->getData();
+//        $banners = $collection->getData();
+//
+//        // Set data
+//        $this->setData('banners', $banners);
+//        $this->setData('mediaURL', $this->_storeManager->getStore()
+//                ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . 'banner/tmp/images/');
+//        return parent::_beforeToHtml();
+//    }
+        protected function _beforeToHtml()
+        {
+            // Init collection
+            $collection = $this->bannerCollectionFactory->create();
 
-        // Get enabled images
-//        $banners = $collection->addFieldToFilter('status', ['eq' => true])->getData();
-        $banners = $collection->getData();
+            // Get enabled images
+            $banners = $collection->getData();
 
-        // Set data
-        $this->setData('banners', $banners);
-        $this->setData('mediaURL', $this->_storeManager->getStore()
-                ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . 'banner/images/');
-        return parent::_beforeToHtml();
-    }
+            // Set data
+            $this->setData('banners', $banners);
+            $this->setData('mediaURL', $this->_storeManager->getStore()
+                    ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . 'banner/tmp/images/');
 
+
+            return parent::_beforeToHtml();
+        }
 
 }

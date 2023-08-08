@@ -56,7 +56,7 @@
             <settings>
                 <elementTmpl>ui/form/element/uploader/image</elementTmpl>
                 <dataType>string</dataType>
-                <label translate="true">Banner Image</label>
+                <label translate="true">Image</label>
                 <visible>true</visible>
                 <required>false</required>
             </settings>
